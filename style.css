@@ -1,0 +1,921 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* ====================== Reset CSS ====================== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #881337;
+    --secondary-color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 804dvh;
+}
+
+/* ---------------------- End Reset CSS ---------------------- */
+
+/* ====================== Class Component ======================*/
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.j-space-between {
+    justify-content: space-between;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.transition {
+    transition: all 0.5s ease-in-out;
+}
+
+/* ---------------------- End Class Component ---------------------- */
+
+/* ====================== Header ====================== */
+
+header {
+    background-color: var(--primary-color);
+    padding: 18px 80px;
+    color: var(--secondary-color);
+}
+
+
+
+header div.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+header nav ul {
+    list-style-type: none;
+    gap: 30px;
+}
+
+header nav ul li a {
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+button.out-line-btn {
+    color: var(--secondary-color);
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+button.out-line-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* ---------------------- End Header ---------------------- */
+
+/* ====================== Hero ====================== */
+
+section.hero {
+    background-color: var(--primary-color);
+    height: 500px;
+    overflow: hidden;
+    padding-left: 80px;
+}
+
+section.hero div.hero-content {
+    flex-direction: column;
+    width: 50%;
+    margin-top: 53px;
+}
+
+section.hero div.hero-content h1.header-hero {
+    color: var(--secondary-color);
+    font-size: 75px;
+    font-weight: 900;
+}
+
+section.hero div.hero-content div.search-area {
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+section.hero div.hero-content div.search-area div.search-box {
+    background-color: white;
+    padding: 10px;
+    flex: 1;
+}
+
+section.hero div.hero-content div.search-area div.search-box input.input-search {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #94a3b8;
+}
+
+section.hero div.hero-content div.search-area div.search-box input.input-search::placeholder {
+    color: #94a3b8;
+}
+
+section.hero div.hero-content div.search-area div.search-box div.search-icon {
+    background: url("icon/search_icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+section.hero div.hero-content div.search-area button.primary-btn {
+    background-color: #be123c;
+    color: white;
+    padding: 10px 25px;
+    height: 38.4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+section.hero div.hero-content div.search-area button.primary-btn:hover {
+    background-color: white;
+    color: #be123c;
+}
+
+section.hero div.hero-content nav.explore-btn ul {
+    list-style: none;
+    gap: 5px;
+}
+
+section.hero div.hero-content nav.explore-btn ul li button.padding-btn {
+    font-size: 14px;
+    padding: 5px 25px;
+}
+
+section.hero img.image-hero {
+    height: 90%;
+    margin-top: 53px;
+}
+
+/* ---------------------- End Hero ---------------------- */
+
+/* ====================== Logo ====================== */
+
+section.logo-section {
+    padding: 40px 200px;
+    background-color: #f1f5f9;
+}
+
+section.logo-section div.flex-logo {
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* ---------------------- End Logo ---------------------- */
+
+/* ====================== Featured art categories Section ====================== */
+
+section.featured {
+    background-color: var(--bg-color);
+}
+
+section.repeat {
+    padding: 80px;
+    background-color: var(--background-color);
+}
+
+section.repeat div.title {
+    height: 48px;
+}
+
+section.repeat div.title h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+section.repeat div.title a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2563EB;
+    text-decoration: none;
+    gap: 20px;
+}
+
+section.repeat div.frame {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+section.repeat div.frame div.card {
+    background: var(--url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 354px;
+}
+
+section.repeat div.frame div.card div.text-card {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    padding: 20px;
+
+}
+
+section.repeat div.frame div.card div.text-card p.top {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+section.repeat div.frame div.card div.text-card p.down {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* ---------------------- End Featured art categories Section ---------------------- */
+
+/* ====================== Latest masterpieces Section ====================== */
+
+section.latest-mas {
+    background-color: var(--bg-color);
+    padding: 80px;
+    padding-bottom: calc(80px - 24px);
+}
+
+section.latest-mas div.cards {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    overflow: hidden;
+    padding-bottom: 24px;
+    position: relative;
+}
+
+section.latest-mas div.cards div.btn-move {
+    position: absolute;
+    top: calc(50% - 48px);
+    right: 36px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    box-shadow:
+        0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+        /* First shadow */
+        0px 0px 4px 0px rgba(0, 0, 0, 0.07);
+    /* Second shadow */
+}
+
+section.latest-mas div.cards div.btn-move img {
+    width: 8px;
+    height: 13px;
+}
+
+section.latest-mas div.cards div.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow:
+        0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+        /* First shadow */
+        0px 0px 4px 0px rgba(0, 0, 0, 0.07);
+    /* Second shadow */
+}
+
+section.latest-mas div.cards div.card .img {
+    background: var(--url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+section.latest-mas div.cards div.text-card {
+    gap: 10px;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+section.latest-mas div.cards div.text-card div.left {
+    background: var(--url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+section.latest-mas div.cards div.text-card div.right {
+    gap: 5px;
+
+}
+
+section.latest-mas div.cards div.text-card div.right p.top-av {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0F172A;
+}
+
+section.latest-mas div.cards div.text-card div.right p.down-av {
+    font-size: 14px;
+    font-weight: 400;
+    color: #94A3B8;
+}
+
+section.latest-mas div.cards div.card:nth-child(2) {
+    position: relative;
+}
+
+section.latest-mas div.cards div.card p.promoted {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #F1F5F9;
+    width: 78px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #292524;
+}
+
+section.latest-mas div.cards div.card:nth-child(3) {
+    position: relative;
+}
+
+section.latest-mas div.cards div.card p.featured {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #F3E8FF;
+    width: 78px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B21A8;
+}
+
+/* ---------------------- End Latest masterpieces Section ---------------------- */
+
+/* ====================== services Section ====================== */
+
+section.services {
+    padding: 80px;
+    gap: 80px;
+    color: #0F172A;
+}
+
+section.services div.title-service {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+section.services div.icon-service {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 48px;
+    width: 100%;
+}
+
+section.services div.icon-service div.block-service {
+    width: 173.33px;
+    height: 102px;
+}
+
+section.services div.icon-service div.block-service p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+section.services div.btn-service button {
+    background-color: #BE123C;
+    color: #FFFFFF;
+    width: 191px;
+    height: 56px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ---------------------- End services Section ---------------------- */
+
+/* ====================== Best solutions Section ====================== */
+
+section.best-solutions {
+    padding: 80px;
+    background-color: #94A3B8;
+    gap: 80px;
+}
+
+section.best-solutions div.text-section {
+    color: #FFFFFF;
+    width: 600px;
+    height: 397px;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+section.best-solutions div.text-section h2 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+section.best-solutions div.text-section p,
+section.best-solutions div.text-section ul {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+section.best-solutions div.text-section ul {
+    list-style-type: none;
+}
+
+section.best-solutions div.text-section ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section.best-solutions div.text-section button {
+    width: 201px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+section.best-solutions div.image-section {
+    width: 600px;
+    height: 383px;
+    position: relative;
+}
+
+/* ---------------------- End Best solutions Section ---------------------- */
+
+/* ====================== Art Gal Section ====================== */
+
+section.art-gal {
+    padding: 80px;
+    background-color: #F1F5F9;
+    gap: 80px;
+    position: relative;
+}
+
+section.art-gal div.text-section {
+    width: 576px;
+    height: 204px;
+}
+
+section.art-gal div.text-section p.top {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #94A3B8;
+}
+
+section.art-gal div.text-section p.top span {
+    color: #2563EB;
+}
+
+section.art-gal div.text-section p.down {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #0F172A;
+}
+
+section.art-gal div.move-left,
+section.art-gal div.move-right {
+    position: absolute;
+    top: calc(50% - 48px);
+    left: 55px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    box-shadow:
+        0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0px 0px 4px 0px rgba(0, 0, 0, 0.07);
+}
+
+section.art-gal div.move-right {
+    left: auto;
+    right: 55px;
+}
+
+section.art-gal div.move-left img,
+section.art-gal div.move-right img {
+    width: 8px;
+    height: 13px;
+}
+
+/* ---------------------- End Art Gal Section ---------------------- */
+
+
+/* ====================== incredible Section ====================== */
+
+section.incredible {
+    padding: 80px;
+    background-color: #94A3B8;
+    gap: 80px;
+}
+
+section.incredible div.text-section {
+    color: #FFFFFF;
+    width: 400px;
+    height: 276px;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+section.incredible div.text-section h2 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+section.incredible div.text-section p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+section.incredible div.text-section button {
+    width: 201px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+section.incredible div.image-section {
+    width: 800px;
+    height: 276px;
+    gap: 24px;
+    position: relative;
+}
+
+section.incredible div.image-section div.card {
+    opacity: var(--op);
+    box-shadow:
+        0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0px 0px 4px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+
+}
+
+section.incredible div.image-section div.card div.img {
+    background: var(--url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: var(--width);
+}
+
+section.incredible div.image-section div.card div.text-card img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+section.incredible div.image-section div.card div.text-card {
+    justify-content: flex-start;
+    gap: 5px;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 16px;
+    color: #0F172A;
+
+}
+
+section.incredible div.image-section div.card div.text-card p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+section.incredible div.image-section div.move-left,
+section.incredible div.image-section div.move-right {
+    position: absolute;
+    top: 114px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    box-shadow:
+        0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0px 0px 4px 0px rgba(0, 0, 0, 0.07);
+    z-index: 1;
+}
+
+section.incredible div.image-section div.move-right {
+    left: auto;
+    right: 68px;
+}
+
+section.incredible div.image-section div.move-left {
+    left: 68px;
+    right: auto;
+}
+
+section.incredible div.image-section div.move-left img,
+section.incredible div.image-section div.move-right img {
+    width: 8px;
+    height: 13px;
+}
+
+/* ---------------------- End incredible Section ---------------------- */
+
+
+/* ====================== Art events Section ====================== */
+
+section.art-events {
+    padding: 80px;
+    gap: 24px;
+}
+
+section.art-events div.header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.1;
+}
+
+section.art-events div.header a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2563EB;
+    text-decoration: none;
+    gap: 20px;
+}
+
+section.art-events div.cards-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+section.art-events div.cards-section div.card {
+    position: relative;
+}
+
+section.art-events div.cards-section div.card div.img {
+    background: var(--url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    border-radius: 5px;
+}
+
+section.art-events div.cards-section div.card div.text-card {
+    height: 132px;
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+section.art-events div.cards-section div.card div.text-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+section.art-events div.cards-section div.card div.text-card p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #0F172A;
+    line-height: 1.6;
+}
+
+section.art-events div.cards-section div.card div.tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+section.art-events div.cards-section div.card div.featured {
+    color: #6B21A8;
+    background-color: #F3E8FF;
+    width: 71px;
+    height: 24px;
+}
+
+section.art-events div.cards-section div.card div.new {
+    color: #166534;
+    background-color: #DCFCE7;
+    width: 44px;
+    height: 24px;
+}
+
+section.art-events div.cards-section div.card div.coming-soon {
+    color: #854D0E;
+    background-color: #FEF9C3;
+    width: 100px;
+    height: 24px;
+}
+
+/* ---------------------- End Art events Section ---------------------- */
+
+
+/* ====================== Join Now Section ====================== */
+
+section.join-now {
+    padding: 80px 80px 0;
+    gap: 80px;
+    background-color: #0F172A;
+}
+
+section.join-now div.text-section {
+    align-items: flex-start;
+    gap: 24px;
+}
+
+section.join-now div.text-section p {
+    color: #FFFFFF;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+section.join-now div.text-section button {
+    color: #FFFFFF;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    width: 152px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+/* ---------------------- End Join Now Section ---------------------- */
+
+
+/* ====================== Footer Section ====================== */
+
+footer.footer{
+    padding: 0 80px;
+}
+
+footer.footer div.columns {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 48px;
+    text-align: left;
+    padding: 48px 0;
+}
+
+footer.footer div.columns div.column h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #94A3B8;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+footer.footer div.columns div.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer.footer div.columns div.column ul li {
+    margin-bottom: 5px;
+    color: #94A3B8;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    cursor: pointer;
+    padding: 12px 0;
+}
+
+footer.footer div.columns div.column ul li a{
+    text-decoration: none;
+    color: #94A3B8;
+}
+
+footer.footer hr {
+    border: 1px solid #e2e8f0;
+}
+
+footer.footer div.social-media {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+footer.footer div.social-media div.text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #94A3B8;
+
+}
+
+footer.footer div.social-media div.icons{
+    gap: 16px;
+}
+
+footer.footer div.social-media div.icons img{
+    cursor: pointer;
+}
+
+footer.footer div.disclaimer p{
+    padding-top: 24px;
+    padding-bottom: 48px;
+    color: #94A3B8;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    width: 1280px;
+}
+
+/* ---------------------- End Footer Section ---------------------- */
